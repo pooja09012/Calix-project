@@ -1,0 +1,9 @@
+# mongodb/values.yaml
+image:
+  repository: mongo
+  tag: latest
+
+persistence:
+  enabled: true
+  storageClass: mongodb-data  # Replace with your storage class name
+  size: 10Gi  # Adjust the storage size as needed
