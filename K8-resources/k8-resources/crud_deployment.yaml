@@ -1,0 +1,20 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: microservice-app
+  template:
+    metadata:
+      labels:
+        app: microservice-app
+    spec:
+      containers:
+      - name: microservice-app
+        image: your-registry/microservice-app:latest
+        ports:
+        - containerPort: 80
