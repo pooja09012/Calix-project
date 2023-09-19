@@ -1,3 +1,6 @@
+Problem Statement:Create an microservice application CRUD app .Which reads from DB responds to API calls ( /api/records, /api/update, etc ). So there will be 4 API calls.
+
+
 1.Create a Python microservice using Flask to implement the CRUD operations and interact with MongoDB.Use Python file K8-resources/crud-app/app.py.
 
 2.Create a Dockerfile to package your Python application into a container using the dockerfile :K8-resources/dockerfile
