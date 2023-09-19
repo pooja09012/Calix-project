@@ -1,0 +1,21 @@
+# microservice-app/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    spec:
+      containers:
+        - name: microservice-app
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          env:
+            - name: DATABASE_HOST
+              value: {{ .Values.database.host }}
+            - name: DATABASE_PORT
+              value: {{ .Values.database.port }}
+            - name: DATABASE_NAME
+              value: {{ .Values.database.name }}
