@@ -19,7 +19,6 @@
 
 7.In your Python application code (in app.py), update the MongoDB connection URL to point to the MongoDB service in your cluster:
 
-# Update the MongoDB connection URL
 client = MongoClient("mongodb://mongodb:27017/")  # Use the Kubernetes Service name
 
 
