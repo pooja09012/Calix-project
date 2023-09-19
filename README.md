@@ -26,6 +26,35 @@ Problem Statement:Create an microservice application CRUD app .Which reads from 
 
 client = MongoClient("mongodb://mongodb:27017/")  # Use the Kubernetes Service name
 
+-----------------------------------------------------------------------------------------
+
+For Helm Charts installation follow below steps:
+
+1.Create two separate Helm charts, one for the microservice application and another for MongoDB.
+
+   helm create microservice-app
+   helm create mongodb
+   
+2.Edit the values.yaml files in both Helm charts to define the configurable values for your microservice application and MongoDB.
+
+3.To install the Helm charts, first package them:
+
+   helm package microservice-app
+   helm package mongodb
+
+4.To install the charts, use the helm install command. Deploy MongoDB first:
+
+      helm install mongodb ./mongodb-<version>.tgz
+
+5.Then deploy the microservice application:
+
+      helm install microservice-app ./microservice-app-<version>.tgz
+
+   
+
+
+
+
 
 
 
