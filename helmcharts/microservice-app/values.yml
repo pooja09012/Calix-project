@@ -1,0 +1,14 @@
+# microservice-app/values.yaml
+image:
+  repository: helmcharts/microservice-app
+  tag: latest
+
+service:
+  port: 80
+
+database:
+  host: mongodb-service
+  port: 27017
+  name: mydatabase
+
+replicaCount: 3
