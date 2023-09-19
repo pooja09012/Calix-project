@@ -1,0 +1,14 @@
+# values.yaml
+replicaCount: 3
+
+image:
+  repository: your-registry/microservice-app
+  tag: latest
+
+service:
+  port: 80
+
+mongodb:
+  enabled: true
+  host: mongodb-service
+  port: 27017
