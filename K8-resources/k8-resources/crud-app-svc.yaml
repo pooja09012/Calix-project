@@ -1,0 +1,11 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-app-service
+spec:
+  selector:
+    app: microservice-app
+  ports:
+    - protocol: TCP
+      port: 80
