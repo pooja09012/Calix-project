@@ -1,0 +1,7 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: mongodb-storage
+provisioner: kubernetes.io/aws-ebs  # Replace with your provisioner
+parameters:
+  type: gp2  # Replace with your storage type (e.g., pd-ssd for GCP)
